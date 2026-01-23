@@ -1,53 +1,51 @@
 ANSWERS
 
 (2)
-test
-(c) Training MSE: XXXX
-(d) Test MSE: XXXX 
-(e) Your answer: XXXX
+(c) Training MSE: 1.535
+(d) Test MSE: 1.754
+(e) Your answer: The test MSE is significantly smaller than the variance of y-test which should mean that my model is better at predicting than if we just always guess the mean of y.
 
 
 (3)
 (b) 
-Feature 1: XXXX (coef: XXXX)
-Feature 2: XXXX (coef: XXXX)
-Feature 3: XXXX (coef: XXXX)
+Feature 1: x0 x2 (coef: 147.570)
+Feature 2: x0 x5 (coef: 35.154)
+Feature 3: x0 x1 (coef: 32.218)
 
 (c) 
-Feature 1: XXXX (coef: XXXX)
-Feature 2: XXXX (coef: XXXX)
-Feature 3: XXXX (coef: XXXX)
+Feature 1: x2 (coef: -146.551)
+Feature 2: x1 (coef: -37.245)
+Feature 3: x5 (coef: -34.383)
 
-(d) y-intercept: XXXX 
+(d) y-intercept: 11.608
 
 (4) 
 (c1) Best hyperparameters: 
-* strategy: XXXX
-* poly degree: XXXX
-* n neighbors: XXXX
-* weight: XXXX
-(c2) Best MSE: XXXX
-(d) Time: XXXX
-(f) test MSE: XXXX 
-(g) Your answer: XXXX
+* strategy: median
+* poly degree: 3
+* n neighbors: 10
+* weight: distance
+(c2) Best MSE: 1.194
+(d) Time: 32.4s
+(f) test MSE: 1.240
+(g) Your answer: Yes! The test MSE is 1.24 for the pipeline with hyperparameter tuning whereas the test mse from part 2 with the initial pipeline is 1.754. Smaller MSE = better!
 
 (5) - (Repeat of (4) with RandomizedGridSearch)
 (c1) Best hyperparameters: 
-* strategy: XXXX
-* poly degree: XXXX
-* n neighbors: XXXX
-* weight: XXXX
-(c2) Best MSE: XXXX
-(d) Time: XXXX
-(f) test MSE: XXXX 
-(g) Your answer: XXXX
-(h) Your answer: XXXX
+* strategy: median
+* poly degree: 2
+* n neighbors: 20
+* weight: uniform
+(c2) Best MSE: 1.344
+(d) Time: 1.4s
+(f) test MSE: 1.428
+(g) Your answer: Yes! This random search strategy resulted in a test mse of 1.428, which is less than the initial mse of 1.754.
+(h) Your answer: The Gridsearch function ended up finding a combination of hyperparameters that yielded a better mse than the RandsomSearch did. Gridsearch goes through every possible combination, which is why it takes longer but it able to find the actual best combination. Randomsearch finds the best combination out or a random list of combinations, and that may not include the actual best combination of hyperparameters. 
 
 (6) 
-(b1) Training MSE: XXXX
-(b2) Test MSE: XXXX 
-(c) Your answer: XXXX
+(b1) Training MSE: 6.635e-13
+(b2) Test MSE: 1.462
+(c) Your answer: The extra variables improve predictability from the very first pipe but not from the pipeline search methods we used in steps 4 or 5. Also the training MSE is insanely lower than test MSE which does tend to mean there is a level of overfitting going on that seems to appear now that we added in the categorical variables.
 
 (7) 
-(b) Your answer: XXXX
-
+(b) Your answer: I learned that you can do most, if not all of your preprocessing for your data using pipes. I like that because it makes things simpler by keeping everything together as opposed to using pandas which would take more time and investigation into the data.
